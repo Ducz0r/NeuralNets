@@ -15,6 +15,9 @@ import numpy as np
 # CODE:
 # =======================
 
+# The MNIST database pickle file should be downloadable from the Deep learning page
+# (http://deeplearning.net/tutorial/gettingstarted.html)
+
 # # Test the basic neural network
 # from impl.neural_network_basic import NeuralNetworkBasic
 # X = np.array([[1., 2., 3.], [5., 6., 7.]])
