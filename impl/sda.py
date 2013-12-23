@@ -235,11 +235,3 @@ class StackedDenoisingAutoencoders(object):
         if not self._trained:
             raise Exception("Cannot return parameters - the model is not yet trained!")
         return self._weights, self._biases, self._biases_prime
-    
-# Test code (on MNIST)
-#import gzip, cPickle
-#f = gzip.open("E:\\DIPLOMA\\Eclipse_workspace\\NeuralNets\\deep_learning_examples\\data\\mnist.pkl.gz", 'rb')
-#train_set, _, _ = cPickle.load(f)
-#f.close()
-#sda = StackedDenoisingAutoencoders(hidden_levels = [500, 500], in_dim = 784, learning_rate = 0.001, batch_size = 10, corruption_level = 0.1, n_epochs = 15, seed = 89677, verbose = True)
-#sda.learn(train_set[0])
