@@ -488,11 +488,3 @@ class StackedRestrictedBoltzmannMachines(object):
         if not self._trained:
             raise Exception("Cannot return parameters - the model is not yet trained!")
         return [rbm.W for rbm in self._rbms], [rbm.hbias for rbm in self._rbms], [rbm.vbias for rbm in self._rbms]
-    
-# Test code (on MNIST)
-#import gzip, cPickle
-#f = gzip.open("E:\\DIPLOMA\\Eclipse_workspace\\NeuralNets\\deep_learning_examples\\data\\mnist.pkl.gz", 'rb')
-#train_set, _, _ = cPickle.load(f)
-#f.close()
-#sda = StackedRestrictedBoltzmannMachines(hidden_levels = [500, 500], in_dim = 784, learning_rate = 0.01, batch_size = 10, k = 1, n_epochs = 100, seed = 123, verbose = True)
-#sda.learn(train_set[0])
